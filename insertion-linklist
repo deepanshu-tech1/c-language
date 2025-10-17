@@ -1,0 +1,80 @@
+//  write a program to create the double linklist and insert the value in the beggining and last and random location
+
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+struct node{
+    int info ; 
+    struct node *lpt;
+    struct node*rpt;
+}; struct node *first;
+
+
+// create the main function to runt the program 
+
+int main()
+{
+
+    void create();
+    create();
+
+    // void insert_beg();
+    // insert_beg();
+
+    // void traverse();
+    // traverse();
+
+
+    getch();
+}
+
+
+// create the create function for the create the doulby linklist  
+
+
+void create()
+{
+  char ch;
+
+    struct node *ptr,*cpt;
+
+    ptr = (struct node*)malloc(sizeof(struct node));
+     printf("enter the value of first node in the double linklist->");
+     scanf("%d",&ptr->info);
+   
+   ptr->lpt= NULL;
+   first= ptr;
+
+   do{
+
+    cpt = (struct node*)malloc(sizeof(struct node));
+    printf("enter the value of next node->");
+    scanf("%d",&cpt->info);
+   ptr->rpt=cpt;
+   cpt->lpt= ptr;
+   ptr = cpt ;
+   printf("press y  if yoy want to add new node in the double linklist->");
+   scanf(" %c",&ch);
+
+    
+   } while(ch == 'y');
+
+   ptr->rpt = NULL;
+}
+
+
+// create the insertion funtion to insert the value in the begging 
+
+
+void insert_beg()
+{
+ 
+ struct node *ptr,*cpt;
+
+ ptr = (struct node*)malloc(sizeof(struct node));
+
+ 
+
+
+}
